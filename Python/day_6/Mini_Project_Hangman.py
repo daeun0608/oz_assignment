@@ -1,6 +1,7 @@
 #문제와 조건은 Mini_Project_Hangman.ipynb
 
 
+
 # 기본 라이브러리라 파이썬 설치시 자동으로 설치됩니다!
 # random 모듈은 랜덤한 숫자를 생성할 때 사용합니다.
 import random
