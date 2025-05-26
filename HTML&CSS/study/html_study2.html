@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color:pink">컨테이너</h2>
+    <p style="color:gray">
+        콘텐츠나 레이아웃에 영향을 주지 않고, 단지 요소 여럿을 묶어 관리를 편하게 하는 역할을 하는 요소<br>
+        콘텐츠 내용을 구분하거나 공통적인 스타일을 적용할 때 사용<br>
+        div(블록), span(인라인)등의 태그를 사용
+    </p><br><br><br>
+
+    <h2 style="color:pink">전역 속성</h2>
+    <p style="color:gray">
+        전역 속성 : 모든 html 태그에서 공통으로 사용하는 속성<br>
+        id : 요소에 고유한 이름을 부여하는 식별자<br>
+        class : 요소를 그룹 별로 묶는 식별자<br>
+        style : 요소에 적용할 css 선언<br>
+        title : 요소의 추가 정보를 툴팁으로 제공<br>
+    </p>
+    <div id="1번"></div>
+    <div id="2번">
+        <p>
+            컨테이너는 아무런 영향도 주지않고 코드만 구분한다.
+            <span style="background-color:yellowgreen">전역속성는 모든 요소가 가진다.</span>
+        </p>
+    </div>
+
+    <br><br><br>
+
+    <h2 style="color:pink">이미지</h2>
+    <p style="color:gray">width와 height의 기본은 px</p>
+    <div id="img태그">
+        <img src="../image/flower.jpg" alt="로딩과 오류 그리고 웹 접근성을 상승시키는 대체 텍스트 속성" width="300">
+    </div>
+
+    <br><br><br>
+
+    <h2 style="color:pink">하이퍼링크</h2>
+    <div id="a태그">
+        <a href="https://www.naver.com" target="_blank">target의 기본값은 현재 탭에서 여는 _self, _blank는 새탭으로 간다.</a><br>
+        <a href="main.html">로컬파일 이동도 가능</a>
+    </div> 
+
+    <br><br><br>
+
+    <h2 style="color:pink">작업도</h2>
+    <p style="color:gray">progress는 작업 진행을 보여준다</p>
+    <progress></progress><br>
+    <progress value="60" max="100"></progress>
+</body>
+</html>

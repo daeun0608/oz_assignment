@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="study_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2 class="p">TEXT</h2>
+    <p class="g">
+        font-size<br>
+        rem : 루트 요소(html태그)의 글자 크기를 배수로 계산해 적용하는 상대 단위<br>
+        em : 부모 요소의 글자 크기를 배수로 계산해 적용하는 상대 단위<br><br>
+        font-weight : 글자 두께 (100~900)<br>
+        line-height : 폰트 크기와, 글꼴에 영향을 받기 때문에 수치를 필요에 따라 바꾸기<br>
+        text-align : 텍스트 정렬 left / right / center / justify(양끝정렬)<br>
+        text-decoration   <br><br>
+    </p>
+    <style>
+        /*
+        html{
+            font-size: 8px;     rem을 변하게함    
+        }
+        */
+        .t1{
+            font-size: 2rem;
+            font-weight: 100;
+            text-align: center;
+        }
+        .t2{
+            font-weight:900;
+        }
+        .t3{
+            line-height: 200px;
+        }
+    </style>
+    <p class="t1">이것은 테스트 문자 a-b-c-d-e</p>
+    <p class="t2">이것은 테스트 문자 </p>
+    <p class="t3">이것은 테스트 문자</p>
+
+    <br><br><br>
+
+    <h2 class="p">글꼴</h2>
+    <p class="g">
+        font-family에 여러글골을 지정하고 앞부터 적용, 적용이 불가하면 뒤의 글꼴 적용<br>
+        
+        웹 폰트 : 컴퓨터마다 글꼴의 설치 여부를 모르기에 '웹 전용 글꼴'로 문제 방지(검색어 : 구글폰트)
+    </p>
+    <style>
+        p.p1{
+            font-family: Arial, monospace;
+        }
+        p.p2{
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    <p class="p1">테스트 문자 하나, 둘, 셋</p>
+    <p class="p2">테스트 문자 one, two, three</p>
+
+    <br><br><br>
+
+    <h2 class="p">Color</h2>
+    <p class="g">
+        color 지정 : 키워드 / rgb / hsl / 16진수<br><br>
+
+        rgb(red, green, blue)<br>
+        rgb(r,g,b,a) : 투명도 추가(기본 1)<br><br>
+
+        hsl(색도hue, 채도saturation, 조도lightness)<br>
+        hsl(h,s,l,a) : 투명도 추가<br>
+        <img src="../image/hue.png" alt="색조" width="500px"><br><br><Br>
+
+        #로 시작하는 16진수값( 00~FF : 0~255 ) : RGB 색상 코드
+        #RRGGBB
+        #RRGGBBAA
+    </p><br><br><br>
+    <style>
+        p#a{
+            color:green;
+            opacity:0.5;
+        }
+        p#b{
+            color:rgba(0%, 50%,0%,0.5)
+        }
+        p#c{
+            color:hsl(300, 100%, 50%)
+        }
+        p#d{
+            color:#FF00FF99;
+        }
+    </style>
+    <p class="p">투명도는 opacity로 설정도 가능</p>
+    <p id="a">색깔을 알아보자</p>
+    <p id="b">색깔을 알아보자</p>
+    <p id="c">색깔을 알아보자</p>
+    <p id="d">색깔을 알아보자</p>
+</body>
+</html>

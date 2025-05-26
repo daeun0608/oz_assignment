@@ -1,0 +1,19 @@
+h4{
+    color:green
+}
+
+.p{
+    color:pink;
+}
+
+.g{
+    color:gray;
+}
+
+.solid{
+    border-style: solid;
+}
+
+.m1{
+    margin : 10px;
+}

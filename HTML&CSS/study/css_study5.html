@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="study_style.css">
+</head>
+<body>
+    <h2 class="p">z-index, overflow</h2>
+    <p class="g">
+        요소의 쌓임순서stack order 를 정의 ( 정수 값으로 레벨 정의 - 높을 수록 위쪽에 위치 )<br>
+        위치 지정 요소에 적용 ( position )<br><br>
+
+        요소 내부의 콘텐츠가 많아지면 자동으로 커지지만,<br>
+        요소의 크기가 정해지면 '넘침 현상' 발생 -> overflow 속성 사용
+        overflow : visible(기본), hidden, scroll, auto(웹 브라우저의 설정 값, 데스크톱에서는 주로 scroll)
+    </p>
+<style>
+    div{
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+    .div1{ 
+      background-color: orange; z-index: 99; 
+      overflow: hidden;
+    }
+    .div2{ background-color: red; left:20px; bottom: 50px; z-index: 33; }
+    .div3{ background-color: purple; left:40px; bottom: 100px; z-index: 21; }
+    .div4{ background-color: green; left:60px; bottom: 150px; z-index: 10; }
+  </style>
+  <div class="div1">orange orange orange orange orange orange orange orange orange orange</div>
+  <div class="div2"></div>
+  <div class="div3"></div>
+  <div class="div4">green green green green green green green green green green green green green green </div>
+</body>
+</html>

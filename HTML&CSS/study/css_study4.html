@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="study_style.css">
+</head>
+<body>
+    <h2 class=p>display</h2>
+    <p class="g">
+        display : none, inline, block, inline-block( 인라인 요소지만, 블록 특성을 추가할 수 있음(width, height같은) )
+    </p>
+    <span style="display:inline-block;width: 100px ;">인라인블록</span><span>실습하기</span>
+    
+    <br><br><br>
+    
+    <h2 class=p>float</h2>
+    <p class="g">
+    웹 요소들이 화면에 표시되는 순서는 기본적으로 html 문서 내에서 태그가 쓰여진 순서로 왼쪽 위에서 오른쪽 아래로 흐른다.<br>
+    float속성은 요소를 문서의 흐름에서 제외하여 부모 또는 루트 요소의 기준으로 위치 변경<br>
+    css3에서는 요소의 위치를 변경을 대체하는게 많아져서 사용률이 내려감<br><br>
+
+    float : left, right, none(기본)<br><br>
+
+    float를 적용한 요소인 '부동 요소'는 다 른 요소에 영향을 주는 역효과를 줄 수 있음 -> clear사용
+    clear : right, left, both
+    </p>
+    <style>
+        .right{
+            float: right;
+        }
+        .left{
+            float: left;
+        }
+        .c_both{
+            clear:both;
+        }
+    </style>
+    <div class="solid m1" style="width:500px;height:120px">
+        <img src="../image/flower.jpg" width="160px" class="right">
+        <img src="../image/flower.jpg" width="160px" class="left">
+        <p>p태그인데도 마치 span처럼 작동 -> float의 역효과</p>
+    </div>
+    <br>
+    <div class="solid m1" style="width:500px;height:120px">
+        <img src="../image/flower.jpg" width="160px" class="right">
+        <img src="../image/flower.jpg" width="160px" class="left">
+        <p class="c_both">clear로 정상작동</p>
+    </div>
+
+    <br><br><br>
+
+    <h2 class=p>position</h2>
+    <p class="g">
+        position으로 요소의 배치 방법을 결정 > tom / bottom / right / left가 최종 위치를 결정<br><br>
+
+        position : static(기본) / relative / absolute / fixed<br>
+        static : 문서의 흐름을 따름<br>
+        relative : 문서의 흐름을 따른 자리를 기준으로 요소 이동<br>
+        absolute : 상위 position속성을 가진 요소를 기준으로 이동, 없으면 화면 기준<br>
+        fixed : 화면을 기준으로 고정
+    </p>
+    <style>
+        div.ex_position{
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: orange;
+        }
+        .rel{
+        position: relative;
+        top: 50px;
+        left: 50px;
+        }
+        .abs{
+        position: absolute;
+        right: 200px;
+        top: 1015px;
+        }
+        .fixed{
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        }
+
+    </style>
+    <div class="ex_position">static</div>
+    <div class="ex_position rel">relative</div>
+    <div class="ex_position abs">absolute<br>right: 200px;<br>
+        top: 1015px;</div>
+    <div class="ex_position fixed">fixed<br>position 예시</div>
+</body>
+</html>
+

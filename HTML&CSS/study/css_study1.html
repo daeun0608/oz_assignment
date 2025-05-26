@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{color:red;}
+    </style>
+    <link rel="stylesheet" href="./study_style.css">
+</head>
+<body>
+    <h2 style="color:pink">CSS</h2>
+    <p style="color:gray">
+        웹 페이지의 스타일을 정의하는 언어 CSS(Cascading Stylesheet)<br>
+        Cascading : "폭포같은", 계속되는, 연속적인<br>
+        -> 여러 스타일이 한 요소에 적용될 수 있을 때, 우선순위 규칙과 적용 흐름이 "Cascading"<br><br><br>
+
+        HTML은 다수의 태그로 CSS는 다수의 스타일 선언문으로 구성된다.<br><br><br>
+    
+        스타일 선언문<br>
+        &nbsp;&nbsp;선택자{<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;속성명: 속성값;<br>
+        &nbsp;&nbsp;    }
+    </p>
+
+    <br><br><br>
+
+    <h2 style="color:pink">CSS적용(우선순위)</h2>
+    <p style="color:gray">    
+        HTML에 CSS 적용<br>
+        1. 인라인 스타일 (태그에 직접 기술) : 웹콘텐츠와 스타일시트를 분리하기 위해 사용 자제<br>
+        2. 스타일 태그 추가 : 내부 스타일시트, 가능한 head에 기술<br>
+        3. 문서 간의 연결 (HTML과 CSS연결) : head에서 link태그로 연결<br>
+    </p><br>
+    <p style="color:lightpink">1. 인라인 스타일 (태그에 직접 기술)</p>
+    <p style="color:blue;">인라인 스타일은 곂쳐도 우선 적용</p>
+    <p style="color:lightpink">2. 스타일 태그 추가</p>
+    <p>곂칠경우 head에서 나중에 쓰여진 선언문으로 적용</h6>
+    <p style="color:lightpink">3. 문서 간의 연결 (HTML과 CSS연결)</p>
+    <h4>셋 다 다르게 염색하기 위해 h4에 적용</h4>
+
+    <br><br><br>
+
+    <h2 style="color:pink">선택자</h2>
+    <p style="color:gray">
+        전체선택자 ( * )<br>
+        태그선택자 ( 태그명 )<br>
+        클래스선택자 ( .클래스 )<br>
+        아이디선택자 ( #아이디 )<br>
+        그룹선택자 ( 선택자, 선택자, 선택자, ... )<br><br>
+
+        조건 여러개 쓰기<br>
+        li.hiphop : list태그이면서 hiphop클래스인 것<br><br>
+
+        선택자의 우선순위<br>
+        id > class > tag
+
+
+
+
+
+        - 속성 선택자
+        - 하위 요소 선택자
+        - 자식 요소 선택자
+        - 인접 형제 선택자
+        - 형제 요소 선택자
+    </p>
+</body>
+</html>

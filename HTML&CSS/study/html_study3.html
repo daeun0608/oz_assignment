@@ -6,29 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-     <div id="list">
+    <h2 style="color:pink">List</h2>
+    <div id="list">
+        <ul>
+            <li>순서가</li>
+            <li>없음</li>
             <ul>
-                <li>순서가</li>
-                <li>없음</li>
-                <ul>
-                    <li>리스트 안에</li>
-                    <li>리스트 넣기</li>
-                </ul>
+                <li>리스트 안에</li>
+                <li>리스트 넣기</li>
             </ul>
-            <ol start="3" type="a">
-                <li>순서가</li>
-                <li>있음</li>
-                <li>type 안에서 alt+space</li>
-            </ol>
-        </div>
+        </ul>
+        <ol start="3" type="a">
+            <li>순서가</li>
+            <li>있음</li>
+            <li>type 안에서 alt+space</li>
+        </ol>
+    </div>
 
-        <br><br><br>
+    <br><br><br>
 
-    <!--표의 컨테이너 thead, tbody, tfoot
-        thead : 표의 제목이나 주제
-        tbody : 표의 본문
-        tfoot : 표의 요약글이나 맺음말
-    -->
+    <h2 style="color:pink">Table</h2>
+    <p style="color:lightpink">
+        표의 컨테이너 thead, tbody, tfoot<br>
+        thead : 표의 제목이나 주제<br>
+        tbody : 표의 본문<br>
+        tfoot : 표의 요약글이나 맺음말<br>
+    </p>
     <div id="table">
         <table border="1">
             <thead>
@@ -49,15 +52,19 @@
 
     <br><br><br>
 
+    <h2 style="color:pink">Input</h2>    
     <div id="input">
-        <!--같은 텍스트라도 브라우저나 모바일에서 인식하고 가장 적합한 동작을 제공-->
-        <label>아이디<input type="text"></label><br>
+        <p style="color:lightpink">
+            - 텍스트 입력<br>&nbsp;&nbsp;
+            같은 텍스트라도 브라우저나 모바일에서 email, search같은 타입을 인식하고 가장 적합한 동작을 제공한다.
+        </p>
+        <label>라벨누르면 이름 선택<input type="text"></label><br>
         <label for="pw">라벨안에 input이 없을경우 for사용</label>
         <input type="email" id="pw"><br>
         <input type="password" placeholder="placeholer"><br>
         <input type="search"><br>
         <input type="date"><br>
-        <!--수치입력-->
+        <p style="color:lightpink">- 수치 입력</p>
         <input type="color"><br>
         <input type="number">버튼으로 숫자를 제어할 수 있는 스피너<br>
         <input type="range"><br>
@@ -66,43 +73,43 @@
         <label><input type="checkbox" name="check">c3</label>
         <br>
         <label><input type="radio" name="radio" value="r1">value를 적어야 서버나 js에 값전달 가능</label>
-        <label><input type="radio" name="radio">r2</label>
+        <label><input type="radio" name="radio">라디오는 name꼭 통일</label>
         <label><input type="radio" name="radio">r3</label>
     </div>
-
-    <br><br><br>
-
+    <p style="color:lightpink">- input태그를 안쓰는 Input</p>
     <select>
         <option value="v1">select로 드롭다운</option>
         <option value="v2">value로</option>
         <option value="v3">값 구별</option>
         <option value="v4" selected>처음 노출할 값 선택</option>
     </select><br>
-    <textarea cols="10" rows="6">cols는 가로, rows가 세로. textarea는 리사이징이 가능하다</textarea>
+    <textarea cols="30" rows="6">cols는 가로, rows가 세로.
+textarea는 리사이징이 가능하다</textarea>
 
     <br><br><br>
 
+    <h2 style="color:pink">영역묶기</h2>
     <fieldset>
         <legend>fieldset으로 영역묶고 legend로 범례표시</legend>
-        <p>progress는 작업 진행을 보여준다</p>
-        <progress></progress><br>
-        <progress value="60" max="100"></progress>
     </fieldset>
 
     <br><br><br>
 
+    <h2 style="color:pink">버튼</h2>
     <input type="button" value="content">
     <button>content</button>
 
     <br><br><br>
 
-    <!--
-        form태그 : 입력값을 서버로 제출하는 태그
-        form속성 : action(서버의 url), method(입력값 제출 방식 get/post)
+    <h2 style="color:pink">form</h2>
+    <p style="color:gray">
+        입력값을 서버로 제출하는 태그<br>
+        속성 : action(서버의 url), method(입력값 제출 방식 get/post)<br>
         get은 서버의 정보를 가져오겠다, post는 서버의 정보를 조작하겠다
-
+    </p>
+    <p style="color:lightpink">
         form안의 input태그에 name속성을 추가해서 서버가 항목을 구별하도록!
-    -->
+    </p>
     <form action="none.com" method="post">
         <label>
             이름 <input type="text" name="name">

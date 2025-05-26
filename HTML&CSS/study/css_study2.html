@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color:pink">박스모델</h2>
+    <p style="color:gray">
+        너비와 높이를 가지는 개별 요소를 '박스'로 표현하고, 박스를 4가지 세부 영역으로 나누어 구분한 일종의 디자인 모델<br>
+         CSS로 정의할 수 있는 모든 요소는 박스 모델 관련 속성 중 일부 또는 전부가 적용
+    </p>
+    <img src="../image/box1.png" width="500">
+    <img src="../image/box2.png" width="500">
+
+    <br><br><br>
+
+    <h2 style="color:pink">콘텐츠 영역</h2>
+    <p style="color:lightpink">whdth, height > 주로 픽셀(px)나 % 단위를 사용<br>
+    %는 자신이 속한 영역에 관련 값이 있어야 해서 기본 웹페이지 height는 정해져 있지 않아서 height를 %로 하면 적용X</p>
+    <style>
+        #c{background-color: red; width:50%; height:50px;}
+    </style>
+    <div id="c"></div>
+    
+    <br><br><br>
+
+    <h2 style="color:pink">테두리</h2>
+    <p style="color:gray">
+        border : 한번에 지정, 빈칸을 둘 수는 있음, 위치 상관X ( border-width, border-style, border-color )<br>
+        border-radius : 좌측 상단부터 시계방향으로 설정할 수 있음
+    </p>
+    <style>
+        .b{background-color: orange; width:50%; height:50px;}
+        #b1{border-style:solid;border-radius: 10px;}
+        #b2{border-style:dotted; border-radius: 10px 20px 30px 40px;}
+        #b3{border:10px double green}
+    </style>
+    <div class="b" id="b1"></div><br>
+    <div class="b" id="b2"></div><br>
+    <div class="b" id="b3"></div>
+
+    <br><br><br>
+    
+    <h2 style="color:pink">여백</h2>
+    <p style="color:gray">
+        테두리 안은 padding, 밖은 margin<br>
+        - 여백은 속성값 개수에 따라 면들의 여백를 정할 수 있다.<br>
+        (1) 모든면<br>
+        (2) 위아래 / 왼오른<br>
+        (3) 위 / 왼오른 / 아래<br>
+        (4) 위 / 오른쪽 / 아래 / 왼쪽<br><br>
+
+        - 접미사를 통해 여백면을 선택할 수 있다 ( top, bottom, left, right )<br>
+        padding-top:20px;<br><br><br>
+
+        margin: auto;너비에서 남는 여백을 동일 분배
+
+
+
+        box-sizing (기본 content-box)<br>
+        내가 설정한 width/height가 padding과 border를 포함한 값인 'border-box'로 설정 > 콘텐츠가 작아짐 
+    </p>
+    <style>
+        #mp{
+            border:solid;
+            margin:10px;
+            padding:40px 30px 20px 10px;
+            background-color: green;
+            text-wrap: wrap;
+        }
+        #mpdiv{
+            background-color: yellow;
+            border:solid;
+            width: 200px;
+            height: 200px;
+        }
+        
+    </style>
+    <div id=mpdiv>
+        <div id=mp>content</div>
+    </div>
+
+    <br><br><br>
+
+    <h2 style="color:pink">배경</h2>
+    <p style="color:gray">
+        background-color : 색코드<br>
+        background-clip: border-box(기본) / paddig-box / content-box<br>
+        background-image:url(이미지경로)<br>
+        background-size:400px 400px<br>
+        background-repeat: repeat(요소보다 작으면 기본 바둑판) / no-repeat / repeat-x / repeat-y<br>
+        background-origin : border-box / padding-box(기본 이미지 시작) / content-box<br>
+        background-position : 시작위치<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top / right / bottom / left / center<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top right(조합가능) / top left(기본값)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100px 50px(x,y축 이동 가능)
+    </p>
+    <style>
+        #bg{
+            width: 200px;
+            height: 200px;
+            border:20px double blue;
+
+            background-color: skyblue;
+            background-clip: padding-box;
+            background-image:url(../image/flower.jpg);
+            background-size: 100px;
+            background-position: top;
+        }
+    </style>
+    <div id="bg"></div>
+</body>
+</html>
