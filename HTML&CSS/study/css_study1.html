@@ -44,27 +44,58 @@
 
     <h2 style="color:pink">선택자</h2>
     <p style="color:gray">
+        선택자의 우선순위<br>
+        id > class > tag<br><br><br>
+
+
         전체선택자 ( * )<br>
         태그선택자 ( 태그명 )<br>
         클래스선택자 ( .클래스 )<br>
         아이디선택자 ( #아이디 )<br>
-        그룹선택자 ( 선택자, 선택자, 선택자, ... )<br><br>
+        그룹선택자 ( 선택자, 선택자, 선택자, ... )<br><br><br>
+
+
+        - 속성 선택자 ( [속성명] )<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- *(포함 여부), ^(시작 여부), $(끝 여부)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;- ex) img[alt] / [alt] / [width $= "0"]<br>
+        - 하위 요소 선택자 ( 공백 ) : 상위 요소에 포함된 하위 요소<br>
+        - 자식 요소 선택자 ( > ) : 상위 요소의 바로 한 단계 하위 요소<br>
+        - 인접 형제 선택자 ( + ) : 형제 요소 중 첫 번째 형제 요소<br>
+        - 형제 요소 선택자 ( ~ ) : 앞은 포함하지 않고 뒤에 나오는 형제들을 대상<br><br><br>
+
 
         조건 여러개 쓰기<br>
-        li.hiphop : list태그이면서 hiphop클래스인 것<br><br>
+        li.hiphop : list태그이면서 hiphop클래스인 것<br><br><br><br>
 
-        선택자의 우선순위<br>
-        id > class > tag
+        <h2 class="p">의사클래스</h2>
+        <p class="g">
+            의사클래스(가상클래스)는 선택자에 추가하는 키워드 요소가 특정한 상태가 되었을 때 선택<br>
+            ex ) h1:hover{ color:red; }<br><br>
+            
+            * 자주 쓰이는 의사 클래스<br>
+            hover : 마우스 포인터가 올라감<br>
+            active : 요소를 활성화/누르기<br>
+            focus : 포커스상태 (ex. 입력창에 커서가 깜박거리는 바로 사용할 수 있는 상태)<br>
+            disabled : 비활성화<br>
+            nth-child() : 형제 사이에서의 순서에 따라 요소 선택자<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;li:nth-child(2){ ... }<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;li:nth-child(n){ ... } -> n은 자연수를 의미<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;li:nth-child(2n){ ... }<br>
+        </p>
+        <br><br><br>
 
+        <h2 class="p">의사요소</h2>
+        <p class="g">
+            의사 요소는 요소의 특정 부분에 대한 스타일을 정의할 수 있다.<br>
+            ex ) l1::first-letter{ font-size:20px; }<br><br>
 
-
-
-
-        - 속성 선택자
-        - 하위 요소 선택자
-        - 자식 요소 선택자
-        - 인접 형제 선택자
-        - 형제 요소 선택자
+            * 자주 쓰이는 의사 요소<br>
+            after : 요소의 앞에 생성 및 추가<br>
+            before<br>
+            first-line : 블록 레벨 요소의 첫번째 선에 스타일 적용<br>
+            marker : 목록 기호의 스타일 적용<br>
+            placeholder : 입력요소에 자리표시자placeholder 스타일 적용<br>
+        </p>
     </p>
 </body>
 </html>
