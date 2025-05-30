@@ -6,3 +6,4 @@ PYTHON  # or """ """
 DB      --
 HTML    <!-- -->
 CSS     /* */
+JS      //  /* */

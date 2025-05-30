@@ -17,3 +17,11 @@ h4{
 .m1{
     margin : 10px;
 }
+
+.code{
+    background-color: lightgray;
+    padding : 10px 20px;
+    margin :5px;
+    color : black;
+    display:inline-block
+}

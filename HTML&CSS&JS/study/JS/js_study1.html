@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../study_style.css">
+</head>
+
+<body>
+    <h1 class="p">JS</h1>
+    <p class="g">
+        HTML은 마크업 언어, CSS는 스타일시트언어<br>
+        JS는 프로그래밍 언어 -> 서버 개발, 어플리케이션 개발, "주된 활동 분야 웹 개발"<br><br>
+    </p>
+    <h3>JS코드 위치</h3>
+    <p class="g">
+        js코드는 보통 body 최하위에 기입<br>
+        -> js보다 html이 먼저 구성되어야하는 경우가 있기 때문에<br><br>
+
+        1. HTML문서 내부 작성<br>
+        2. JS파일을 HTML에 연결(link태그 X, script태그의 src속성 활용)<br>
+        <span class="code">&lt;script src="study.js"&gt;&lt;/script&gt;</span><br><br>
+
+        script의 src속성을 사용한다면 태그안에 데이터를 넣을 수 없고 혼합하려면 태그를 2개 사용해야함
+    </p>
+
+    <br><br><br>
+
+    <h1 class="p">window객체</h1>
+    <h3>객체</h3>
+    <p class="g">
+        JS는 대부분 지시를 하고자하는 대상(객체)에게 입력 > 처리 > 출력 하는 절차를 따라 수행<br><br>
+
+        객체.데이터 : 객체가 가지는 다양한 데이터 사용(속성)<br>
+        객체.기능( ) : 객체가 가지는 다양한 기능을 수행(메소드)<br><br>
+    </p>
+
+    <h3>window 객체</h3>
+    <p class="g">
+        브라우저가 제공하는 최상위 객체<br>
+        let, const가 아닌 모든 변수/함수는 자동으로 window 객체의 속성으로 등록된다 그래서 편의상 생략된다.<br><br>
+
+        - alter<br>
+        <span class="code">
+            window.alert('경고창')<br>
+            salter('명령문은 한줄 당 하나씩, 세미콜론을 사용하면 한줄에 여러개 가능')
+        </span><br><br>
+
+        - console<br>
+        콘솔console은 브라우저의 디버깅 콘솔을 의미, 브라우저에 내장된 하위 객체<br>
+        <span class="code">
+            console.log('console 창에 log찍기')
+        </span>
+    </p>
+
+    <br><br><br>
+
+    <h1 class="p">식별자</h1>
+    <p class="g">
+        let ( 변수를 만들겠다, 초기화하지 않고 선언만 가능 )<br>
+        let 변수이름 = 데이터<br><br>
+
+        const 상수이름 = 데이터 ( 선언과 초기화를 동시에 해야함, 초기화 하지않으면 값이 없는 것으로 고정 )
+    </p>
+
+    <br><br><br>
+
+    <h1 class="p">자료형</h1>
+    <p class="g">
+        자료형 ( 숫자number, 문자열string, 불리언boolean, 다양한 목적과 형태의 객체 )<br>
+        undefined : 데이터가 정의되지 않았음 ( 선언만 된 변수일 경우 )<br>
+        null : 데이터가 없음<br><br>
+
+        - 자료형 확인하기<br>
+        <span class="code">
+            console.log(typeof 3)
+        </span><br><br>
+        
+    </p>
+
+    <h3>number</h3>
+    <p class="g">
+        산술 연산 ( +, -, *, /, % ) + ( += 같은 산술대입 가능 )<br>
+        문자 연산 : + 해서 새로운 문자열 생성<br><br>
+    </p>
+
+    <h3>string</h3>
+    <p class="g">
+        문자열 : 기호의 순차 수열로 문자, 숫자, 특수문자 등 다양한 기호를 조합해 만들 수 있는 '기호의 집합'<br>
+        ('', "", ``) -> 이후의 ``(템플릿 리터럴)는 포맷을 위해서 추가<br><br>
+
+        -템플릿 리터럴<br>
+        <span class="code">
+            const str = `문자열 안에 변수의 ${data} 추가하기`<br>
+            const str = `변수가 아니여도 반환값이 있으면 포맷 ${prompt('가능?')}`
+        </span><br><br>
+
+        - prompt : 문자열 입력받기<br>
+        <span class="code">
+            const data = prompt('사용자에게서 문자열 입력받기') -> 문자열 반환
+        </span>
+    </p><br>
+
+    <h3>boolean ( true / false )</h3>
+    <p class="g">
+        - boolean 입력받기<br>
+        <span class="code">
+            window.confirm() -> 팝업창으로 true / false 반환
+        </span>
+    </p>
+</body>
+
+</html>
