@@ -29,20 +29,46 @@
         window.document : 브라우저에 렌더링되는 HTML 문서 자체를 의미 (DOM 접근용 객체)<br>
         -> 페이지 콘텐츠, 즉 DOM에 대한 진입점 역할을 하는 프로그래밍 인터페이스<br><br>
 
-        - Selector, textContent<br>
+        - 요소 선택 메소드<br>
         <span class="code">
-            document.query Selector('p') -> 선택자를 인자로 전달받아, 문서 내 첫번째 요소를 반환<br>
-            document.query Selector('#text')<br><br>
+            document.querySelector('p') -> 선택자를 인자로 전달받아, 문서 내 첫번째 요소를 반환<br>
+            document.querySelector('#text')<br>
+            document.querySelectorAll('css선택자')<br><br>
 
-            const p = document.query Selector('p')<br>
-            p.textContent = "요소 내 텍스트 콘텍츠를 확인 / 변경 가능"
+            document.getElementById('id값')<br>
+            document.getElementsByClassName('class값')
+        </span><br><br>
+
+        - 속성 선택 메소드<br>
+        <span class="code">
+            const p = document.querySelector('p')<br>
+            p -> 요소Element의 내용, 속성값들을 반환<br><br>
+
+            p.textContent = "요소 내 텍스트 콘텍츠를 확인 / 변경 가능"<br>
+            p.innerText <- textContent는 코드상 공백을 포함하지만 innerText는 텍스트만 가져온다<br>
+                p.className<br>
+                p.style( .color / .width )<br>
+                p.title<br><br>
+
+                p.innerHTML : 요소 내의 HTML코드를 텍스트 형태로 반환
+        </span><br><br>
+
+        - 코드 생성 메소드<br>
+        <span class="code">
+            document.write(x) : 문서에 콘텐츠 x를 추가 입력<br><br>
+
+            document.createElement('div')<br>
+            document.createElement('p')<br>
+            -> 만들기만 하고 적용X<br><br><br>
+
+            const p = document.createElement('p')<br>
+            p.style.color = 'blue'<br><br>
+            const div = document.getElementById('container')<br>
+            div.appendChild(p)<br>
+            -> append는 노드 객체와 문자열을 추가할 수 있고, appendChild는 노드 객체(html 요소, tag)만 추가할 수 있다.<br>
+            -> append는 추가만 하고, appendChild는 반환도 한다는 특징도 있다.
         </span>
     </p>
-
-
-
-
-
 </body>
 
 </html>
