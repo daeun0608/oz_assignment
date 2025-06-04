@@ -8,10 +8,8 @@ form.addEventListener('submit', function (e) {
     let pw2 = e.target.pw2.value
     let name = e.target.name.value
     let phone = e.target.phone.value
-    let position = e.target.position.value
     let gender = e.target.gender.value
     let email = e.target.email.value
-    let intro = e.target.intro.value
 
     //에러 감지
     if (id.length < 6) {
@@ -25,19 +23,9 @@ form.addEventListener('submit', function (e) {
     }
 
     //가입 환영 인사
-    document.body.innerHTML = ""
-    document.write(`<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 양식</title>
-    <link rel="stylesheet" href="join.css">
-    </head>
-    <body>
-    <div id="container"><div class='next'>${id}님 환영합니다.<br>
-    회원 가입 시 입력학신 내역은 다음과 같습니다.<br>
-    아이디 : ${id}<br>
-    이름 : ${name}<br>
-    전화번호 : ${phone}<br>
-    원하는 직무 : ${position}</div></div></body>
-    `)
-    })
+    alert(`${id}님 환영합니다.
+회원 가입 시 입력학신 내역은 다음과 같습니다.
+아이디 : ${id}
+이름 : ${name}
+전화번호 : ${phone}`)
+})
