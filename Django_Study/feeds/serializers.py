@@ -3,7 +3,7 @@ from .models import Feed
 from users.serializers import FeedUserSerializer
 
 class FeedSerializer(ModelSerializer):
-    user = FeedUserSerializer()
+    user = FeedUserSerializer(read_only=True)
     class Meta:
         model = Feed
         fields = '__all__'

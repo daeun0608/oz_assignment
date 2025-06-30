@@ -23,6 +23,19 @@ class Feeds(APIView):
 		serializer = FeedSerializer(feeds, many=True)
 		return Response(serializer.data)
 
+	def post(self, request):
+		serializer = FeedSerializer(data=request.data)	# 역직렬화
+		if serializer.is_valid():
+			feed=serializer.save(user=request.user)
+			#print(feed)
+
+			serializer = FeedSerializer(feed)
+			#print(serializer)
+			#print(serializer.data)
+			return Response(serializer.data)
+		else:
+			return Response(serializer.errors)
+
 class FeedDetail(APIView):
 	def get_object(self, feed_id):
 		try:
