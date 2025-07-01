@@ -3,6 +3,8 @@ from rest_framework.exceptions import NotFound, ParseError
 from rest_framework.response import Response
 from .serializers import MyInfoUserSerializer
 from django.contrib.auth.password_validation import validate_password
+from rest_framework.authentication import TokenAuthentication # 사용자 인증 (추가)
+from rest_framework.permissions import IsAuthenticated # 권한 부여 (추가)
 
 # Create your views here.
 class Users(APIView):
@@ -27,6 +29,9 @@ class Users(APIView):
             raise ParseError(serializer.errors)
 
 class MyInfo(APIView):
+    authentication_classes = [TokenAuthentication]  # 추가
+    permission_classes = [IsAuthenticated]  # 추가
+
     def get(selfself,request):
         user=request.user
         serializer=MyInfoUserSerializer(user)
