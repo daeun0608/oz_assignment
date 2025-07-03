@@ -44,7 +44,8 @@ CUSTOM_USER_APPS = [
     "rest_framework",
     "feeds.apps.FeedsConfig",
     "reviews.apps.ReviewsConfig",
-    "rest_framework.authtoken"
+    "rest_framework.authtoken",
+    "rest_framework_simplejwt",
 ]
 
 INSTALLED_APPS = DJANGO_SYSTEM_APPS + CUSTOM_USER_APPS
@@ -135,6 +136,11 @@ AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication', # 추가
+        # 'rest_framework.authentication.TokenAuthentication',
+
+        # 순서 주의, simplejwt가 부득이하게 동작하지 않거나 하면 커스텀jwt사용
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        #"config.authentication.JWTAuthentication"  # 커스텀 JWT 인증 클래스 사용
     ],
 }
+
